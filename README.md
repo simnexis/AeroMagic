@@ -6,6 +6,10 @@ AeroMagic is a real-time computer vision project that uses your webcam to track 
 
 Built with Python, OpenCV, and MediaPipe, it's my take on making hand tracking feel a little more futuristic.
 
+## ✨ See AeroMagic in Action
+
+![AeroMagic Demo](assets/aeromagic-demo.png)
+
 ## ⚡ Features
 
 - 🖐️ Real-time hand tracking through your webcam
