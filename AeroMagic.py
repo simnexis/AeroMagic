@@ -9,7 +9,7 @@ import numpy as np
 import mediapipe as mp
 
 CAMERA_INDEX = 0
-CAMERA_W, CAMERA_H = 960, 540
+CAMERA_W, CAMERA_H = 720, 420
 CANVAS = 720
 GOLD = (8, 112, 255)         # BGR: rich amber-gold
 PALE_GOLD = (35, 185, 255)

@@ -1,69 +1,89 @@
-# ✨ AeroMagic
+﻿# ✨ AeroMagic
 
-Turning hand movements into magic. 🪄
-
-AeroMagic is a real-time computer vision project that uses your webcam to track your hands and create glowing, mystical sphere effects that follow your movements.
-
-Built with Python, OpenCV, and MediaPipe, it's my take on making hand tracking feel a little more futuristic.
-
-## ✨ See AeroMagic in Action
-
-![AeroMagic Demo](assets/aeromagic-demo.png)
-
-## ⚡ Features
-
-- 🖐️ Real-time hand tracking through your webcam
-- 🔮 Glowing sphere effects that follow your hands
-- ✨ Mystical orange, gold, and crimson visuals
-- 📏 Dynamic sphere scaling based on apparent hand size
-- 🤲 Support for tracking both hands
-
-## 🛠️ Built With
-
-- Python 3.11
-- OpenCV
-- MediaPipe
-- NumPy
-
-## 🚀 Getting Started
-
-**1. Clone the repository**
-
-```bash
-git clone https://github.com/simnexis/AeroMagic.git
-cd AeroMagic
-```
-
-**2. Create a virtual environment**
-
-```powershell
-py -3.11 -m venv .venv
-```
-
-**3. Install the dependencies**
-
-```powershell
-.\.venv\Scripts\python.exe -m pip install mediapipe==0.10.21 opencv-python numpy
-```
-
-**4. Run AeroMagic**
-
-```powershell
-.\.venv\Scripts\python.exe AeroMagic.py
-```
-
-Make sure your webcam is connected and your hands are clearly visible in the frame.
-
-## 💡 Why AeroMagic?
-
-I wanted to explore how computer vision could turn simple hand movements into something interactive and visually interesting. AeroMagic is a hands-on experiment with real-time tracking, creative coding, and visual effects.
-
-## 👨‍💻 Creator
-
-**SIMNEXIS**
-
-GitHub: [@simnexis](https://github.com/simnexis)
+> **Real-time hand tracking and glowing mystical visual effects driven by computer vision.**
 
 ---
 
-*Built with Python, a webcam, and a little bit of magic. ✨*
+## 🌌 Overview
+
+**AeroMagic** transforms natural webcam hand movements into an interactive visual experience. Built with Python, OpenCV, and MediaPipe, the application tracks hand landmarks in real time and synthesizes glowing, particle-rich mystical energy spheres that follow the user's palms.
+
+---
+
+## 📸 Demo Preview
+
+![AeroMagic Demo](assets/aeromagic-demo.png)
+
+---
+
+## ⚡ Features
+
+- **🖐️ Real-time Hand Tracking**: Sub-millisecond landmark inference powered by MediaPipe Hands.
+- **✨ Mystical Sphere Synthesis**: Multi-layered amber-gold, pale-gold, and crimson visual radiance.
+- **📏 Dynamic Scaling**: Dynamic sphere diameter and particle speed adjusted in real time based on apparent hand-to-camera proximity.
+- **👐 Bi-manual Tracking**: Full concurrent support for both left and right hands.
+- **🎯 Open-Palm Gesture Triggering**: Intelligent gesture gating using geometric landmark ratios so visual effects only trigger on intentional palm poses.
+
+---
+
+## 🛠️ Tech Stack & Requirements
+
+- **Python**: 3.10 or 3.11 recommended
+- **OpenCV (opencv-python)**: Video capture, frame transforms, and alpha blending
+- **MediaPipe (mediapipe==0.10.21)**: 21 3D hand-landmark detection model
+- **NumPy**: Vectorized color math and coordinate clamping
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+`ash
+git clone https://github.com/simnexis/AeroMagic.git
+cd AeroMagic
+`
+
+### 2. Set up virtual environment
+
+`powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+`
+
+### 3. Install dependencies
+
+`powershell
+pip install -r requirements.txt
+`
+
+### 4. Run AeroMagic
+
+`powershell
+python AeroMagic.py
+`
+
+*Ensure your webcam is connected and well-lit. Hold an open palm up to the camera to summon the sphere!*
+
+---
+
+## 🎮 Controls
+
+| Key / Gesture | Action |
+| :--- | :--- |
+| **Open Palm** | Activates and anchors mystical sphere |
+| **Closed Fist / Relaxed** | Dismisses effect gracefully |
+| **Q / Esc** | Exit application cleanly |
+
+---
+
+## 📄 License
+
+This project is open-source and distributed under the [MIT License](LICENSE).
+
+---
+
+## 👩‍💻 Author
+
+**Simran Gupta (SIMNEXIS)**
+- GitHub: [@simnexis](https://github.com/simnexis) / [@Simranroshangupta](https://github.com/Simranroshangupta)
