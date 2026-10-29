@@ -1,89 +1,117 @@
-﻿# ✨ AeroMagic
+<div align="center">
 
-> **Real-time hand tracking and glowing mystical visual effects driven by computer vision.**
+# ✨ AeroMagic
 
----
+### *Real-time Computer Vision & Mystical Particle Spheres with MediaPipe & OpenCV*
 
-## 🌌 Overview
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.10+-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org)
+[![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10.21-00C4B4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/mediapipe)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-**AeroMagic** transforms natural webcam hand movements into an interactive visual experience. Built with Python, OpenCV, and MediaPipe, the application tracks hand landmarks in real time and synthesizes glowing, particle-rich mystical energy spheres that follow the user's palms.
+> **Transforms natural webcam hand gestures into responsive, particle-rich mystical energy spheres rendered at 60 FPS.**
+
+</div>
 
 ---
 
 ## 📸 Demo Preview
 
-![AeroMagic Demo](assets/aeromagic-demo.png)
+<div align="center">
+  <img src="assets/aeromagic-demo.png" alt="AeroMagic Demo" width="700">
+</div>
 
 ---
 
-## ⚡ Features
+## ⚡ Key Highlights
 
-- **🖐️ Real-time Hand Tracking**: Sub-millisecond landmark inference powered by MediaPipe Hands.
-- **✨ Mystical Sphere Synthesis**: Multi-layered amber-gold, pale-gold, and crimson visual radiance.
-- **📏 Dynamic Scaling**: Dynamic sphere diameter and particle speed adjusted in real time based on apparent hand-to-camera proximity.
-- **👐 Bi-manual Tracking**: Full concurrent support for both left and right hands.
-- **🎯 Open-Palm Gesture Triggering**: Intelligent gesture gating using geometric landmark ratios so visual effects only trigger on intentional palm poses.
+- **🖐️ Sub-Millisecond Hand Tracking**: 21 3D hand-landmark topology tracking powered by Google MediaPipe Hands.
+- **✨ Layered Radiance Physics**: Multi-stage alpha blending synthesizing concentric amber-gold, pale-gold, and crimson energy particle fields.
+- **📏 Dynamic Depth Scaling**: Dynamically recalculates sphere radius and angular velocity based on landmark distance / apparent camera proximity.
+- **👐 Bi-Manual Synthesis**: Concurrent dual-hand tracking with independent particle emitter physics.
+- **🎯 Geometric Gesture Gating**: Aspect-ratio and fingertip-to-wrist vector checking to ensure spheres only summon on deliberate open-palm poses.
 
 ---
 
-## 🛠️ Tech Stack & Requirements
+## 🏗️ Architecture
 
-- **Python**: 3.10 or 3.11 recommended
-- **OpenCV (opencv-python)**: Video capture, frame transforms, and alpha blending
-- **MediaPipe (mediapipe==0.10.21)**: 21 3D hand-landmark detection model
-- **NumPy**: Vectorized color math and coordinate clamping
+```text
+Webcam Frame (OpenCV VideoCapture)
+       │
+       ▼
+RGB Conversion & Landmark Inference (MediaPipe Hands)
+       │
+       ▼
+Geometric Palm Verification (Wrist-to-MCP Distance & Finger Extension Ratios)
+       │
+   [Verified]
+       │
+       ▼
+Particle Physics Simulation (Dynamic Radiance, Angular Velocity, Radial Blend)
+       │
+       ▼
+Sub-pixel Alpha Blending & Particle Overlay
+       │
+       ▼
+Real-time 60 FPS Display (cv2.imshow)
+```
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
-`ash
+```bash
 git clone https://github.com/simnexis/AeroMagic.git
 cd AeroMagic
-`
+```
 
-### 2. Set up virtual environment
+### 2. Set Up Virtual Environment
 
-`powershell
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-`
+```
 
-### 3. Install dependencies
+*(On macOS / Linux: `source .venv/bin/activate`)*
 
-`powershell
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-`
+```
 
 ### 4. Run AeroMagic
 
-`powershell
+```bash
 python AeroMagic.py
-`
+```
 
-*Ensure your webcam is connected and well-lit. Hold an open palm up to the camera to summon the sphere!*
+*Ensure your webcam is enabled and the room has reasonable lighting. Hold an open palm up to the camera to summon the sphere!*
 
 ---
 
 ## 🎮 Controls
 
-| Key / Gesture | Action |
+| Action | Result |
 | :--- | :--- |
-| **Open Palm** | Activates and anchors mystical sphere |
-| **Closed Fist / Relaxed** | Dismisses effect gracefully |
-| **Q / Esc** | Exit application cleanly |
+| **Open Palm** | Summons and anchors mystical energy sphere |
+| **Closed Fist / Relaxed Hand** | Dismisses particle field smoothly |
+| **Move Hand Closer / Further** | Dynamically scales sphere diameter and particle speed |
+| **`Q` or `Esc`** | Exit application cleanly |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python 3.10+**
+- **OpenCV (`opencv-python`)**: High-throughput video stream acquisition, matrix math, color space conversion, alpha blending.
+- **MediaPipe (`mediapipe==0.10.21`)**: 21 3D hand landmarks detection with GPU/CPU acceleration.
+- **NumPy**: Vectorized coordinate calculations and bounding radius computation.
 
 ---
 
 ## 📄 License
 
-This project is open-source and distributed under the [MIT License](LICENSE).
-
----
-
-## 👩‍💻 Author
-
-**Simran Gupta (SIMNEXIS)**
-- GitHub: [@simnexis](https://github.com/simnexis) / [@Simranroshangupta](https://github.com/Simranroshangupta)
+This project is licensed under the [MIT License](LICENSE) © 2026 Simran Gupta ([@simnexis](https://github.com/simnexis)).
